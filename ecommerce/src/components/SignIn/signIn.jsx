@@ -9,7 +9,7 @@ const SignIn =() =>{
 
     const[ inputText ,setinputText] =useState({
 
-        name : '',
+        email : '',
         password : ''
 
     });
@@ -17,11 +17,14 @@ const SignIn =() =>{
     const submitting =(event) =>{
 
         event.preventDefault();
+
         alert("sucessfully")
 
     }
 
-    const Changer =(name ,value) =>{
+    const Changer =(event) =>{
+
+        const {name , value} = event.target
 
        setinputText((prevValue) => {
         return {
@@ -45,7 +48,7 @@ const SignIn =() =>{
                     type="email"
                     name="email" 
                     label="Email" 
-                    value={inputText.email}  
+                    value={inputText.email}
                     handleChange={Changer} required/>
 
                    
@@ -53,6 +56,7 @@ const SignIn =() =>{
                     type="password"
                     name="password" 
                     label="Password" 
+                    value={inputText.password}
                     handleChange={Changer} required/>
 
 

@@ -21,11 +21,19 @@ const Header =() =>{
 
         </Link>
 
-        <Link className="option" to='/shop'>
+        <Link className="option" to='/sign-in/'>
+
+        SIGN IN 
+        
+        </Link>
+
+        
+        <Link className="option" to='/contact'>
 
         CONTACT
         
         </Link>
+
        
         </div>  
         </div>
